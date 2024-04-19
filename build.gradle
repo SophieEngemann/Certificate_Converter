@@ -2,11 +2,11 @@ plugins {
     id("java")
 }
 
-group = "org.CertificateConverter"
+group = "bohnen.it.CertificateConverter"
 group = "PemToPfxConverter"
 group = "PemReader"
 group = "PemKeyExtractor"
-version = "1.0-SNAPSHOT"
+version = "1.0"
 
 repositories {
     mavenCentral()
