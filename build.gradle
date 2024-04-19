@@ -1,0 +1,29 @@
+plugins {
+    id("java")
+}
+
+group = "org.CertificateConverter"
+group = "PemToPfxConverter"
+group = "PemReader"
+group = "PemKeyExtractor"
+version = "1.0-SNAPSHOT"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation(platform("org.junit:junit-bom:5.9.1"))
+    testImplementation("org.junit.jupiter:junit-jupiter")
+    //implementation files('lib/bcprov-jdk15to18-177.jar')
+    // https://mvnrepository.com/artifact/org.bouncycastle/bcprov-jdk15on
+    implementation group: 'org.bouncycastle', name: 'bcprov-jdk15on', version: '1.70'
+    // https://mvnrepository.com/artifact/org.bouncycastle/bcpkix-jdk15on
+    implementation group: 'org.bouncycastle', name: 'bcpkix-jdk15on', version: '1.70'
+
+}
+
+
+tasks.test {
+    useJUnitPlatform()
+}
