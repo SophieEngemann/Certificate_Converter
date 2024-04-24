@@ -5,7 +5,6 @@ plugins {
 group = "bohnen.it.CertificateConverter"
 group = "PemToPfxConverter"
 group = "PemReader"
-group = "PemKeyExtractor"
 version = "1.0"
 
 repositories {
