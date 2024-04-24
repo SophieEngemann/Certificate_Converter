@@ -19,6 +19,9 @@ steps:
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.17'
     gradleOptions: '-Xmx3072m'
+- task: CmdLine@2
+  inputs:
+    script: 'ls $(Build.ArtifactStagingDirectory)'
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)/build/libs'
