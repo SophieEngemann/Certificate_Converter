@@ -1,20 +1,30 @@
-# Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+# CertificateConverter
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+This Java program allows for the detection of certificate formats (PEM or PFX) by reading a certificate, identifying individual certificates within it, and outputting them. Additionally, it facilitates the creation of a new certificate chain, which can be converted to PEM and, if desired, to PFX format.
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+## Installation
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+Install the [bcprov-jdk15on](https://mvnrepository.com/artifact/org.bouncycastle/bcprov-jdk15on)
+library, version 1.70, from the website
+## Usage
+
+```python
+Execute the application.
+Enter the file path to the certificate.
+Provide the password.
+Select the target format (ClearPass or Innovaphone) for the certificate chain.
+Specify the output directory and filename for the certificate chain.
+Optional: Convert the PEM certificate to a PFX file
+```
+## Features
+- Conversion of PEM files into temporary PFX files, password remains unchanged.
+- Certificate detection
+
+- Compilation of certificate chains for various platforms such as ClearPass and Innovaphone.
+
+- Conversion to pfx possible
+
+
+## Notes
+The certificate that is loaded, especially the Pem, must have the correct “normal” certificatechain as follows Key certificate, Ca certificate, Intermediate, root 
