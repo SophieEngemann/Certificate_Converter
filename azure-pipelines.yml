@@ -24,6 +24,6 @@ steps:
     script: 'ls $(Build.ArtifactStagingDirectory)'
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)/Certificate-converter/build/libs'
+    PathtoPublish: '$(Build.SourcesDirectory)/build/libs'
     ArtifactName: 'Certificate-converter'
     publishLocation: 'Container'
