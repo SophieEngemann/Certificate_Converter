@@ -27,4 +27,4 @@ Optional: Convert the PEM certificate to a PFX file
 
 
 ## Notes
-The certificate that is loaded, especially the Pem, must have the correct “normal” certificatechain as follows Key certificate, Ca certificate, Intermediate, root.
+The certificate that is loaded, especially the Pem, must have the correct “normal” certificatechain as follows Key certificate, Ca certificate, Intermediate, root
