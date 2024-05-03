@@ -26,6 +26,5 @@ java -jar CertificateConverter-1.0.jar
 
 - Conversion to pfx possible
 
-
 ## Notes
 The certificate that is loaded, especially the Pem, must have the correct “normal” certificatechain as follows Key certificate, Ca certificate, Intermediate, root.
