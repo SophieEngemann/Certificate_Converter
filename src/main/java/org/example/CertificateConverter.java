@@ -255,12 +255,20 @@ public class CertificateConverter {
 
         for (X509Certificate cert : certsInOrder) {
             certChainStr.append("-----BEGIN CERTIFICATE-----\n");
-            certChainStr.append(encodeToBase64(cert.getEncoded())).append("\n");
+            String encodedCert = encodeToBase64(cert.getEncoded());
+            // Füge Zeilenumbrüche nach jedem 64. Zeichen ein
+            for (int i = 0; i < encodedCert.length(); i += 64) {
+                certChainStr.append(encodedCert, i, Math.min(i + 64, encodedCert.length())).append("\n");
+            }
             certChainStr.append("-----END CERTIFICATE-----\n");
         }
 
         certChainStr.append("-----BEGIN PRIVATE KEY-----\n");
-        certChainStr.append(encodeToBase64(privateKey.getEncoded())).append("\n");
+        String encodedPrivateKey = encodeToBase64(privateKey.getEncoded());
+        // Füge Zeilenumbrüche nach jedem 64. Zeichen ein
+        for (int i = 0; i < encodedPrivateKey.length(); i += 64) {
+            certChainStr.append(encodedPrivateKey, i, Math.min(i + 64, encodedPrivateKey.length())).append("\n");
+        }
         certChainStr.append("-----END PRIVATE KEY-----\n");
 
         writeToFile(certChainFilePath, certChainStr.toString());
@@ -280,7 +288,11 @@ public class CertificateConverter {
 
         for (X509Certificate cert : certsInOrder) {
             certChainStr.append("-----BEGIN CERTIFICATE-----\n");
-            certChainStr.append(encodeToBase64(cert.getEncoded())).append("\n");
+            String encodedCert = encodeToBase64(cert.getEncoded());
+            // Füge Zeilenumbrüche nach jedem 64. Zeichen ein
+            for (int i = 0; i < encodedCert.length(); i += 64) {
+                certChainStr.append(encodedCert, i, Math.min(i + 64, encodedCert.length())).append("\n");
+            }
             certChainStr.append("-----END CERTIFICATE-----\n");
         }
 
