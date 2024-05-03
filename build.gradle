@@ -20,6 +20,13 @@ dependencies {
     implementation group: 'org.bouncycastle', name: 'bcpkix-jdk15on', version: '1.70'
 
 }
+apply plugin: 'java'
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'org.example.CertificateConverter'
+    }
+}
 
 
 tasks.test {
