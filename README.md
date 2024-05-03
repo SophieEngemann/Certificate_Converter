@@ -10,13 +10,14 @@ library, version 1.70, from the website
 ## Usage
 
 ```python
-Execute the application.
-Enter the file path to the certificate.
-Provide the password.
-Select the target format (ClearPass or Innovaphone) for the certificate chain.
-Specify the output directory and filename for the certificate chain.
-Optional: Convert the PEM certificate to a PFX file
+java -jar CertificateConverter-1.0.jar
 ```
+- Execute the application.
+- Enter the file path to the certificate.
+- Provide the password.
+- Select the target format (ClearPass or Innovaphone) for the certificate chain.
+- Specify the output directory and filename for the certificate chain.
+- Optional: Convert the PEM certificate to a PFX file
 ## Features
 - Conversion of PEM files into temporary PFX files, password remains unchanged.
 - Certificate detection
